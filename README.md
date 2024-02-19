@@ -1,14 +1,41 @@
-How to use:
-1. Clone the repo
-2. npm install
-3. Create your own mongo db and collection and fill up with your own data the replace MONGO_URi in app.js
- - MONGO_URI = 'mongodb+srv://<username>:<password>@cluster0.mnc8coe.mongodb.net/<database>?retryWrites=true&w=majority';
-4. Run node app.js
+# Sample Endpoint
 
-TESTED using POSTMAN
-Endpoint Status: WORKING
-- GETTING DATA USING ID
-  <br></br>
- <img width="386" alt="image" src="https://github.com/GuichoEstrada/sample_endpoint/assets/44462824/28f889cd-d3e4-47fe-9dc0-7034d0e7a17d">
-- GETTING ALL DATA
- <img width="374" alt="image" src="https://github.com/GuichoEstrada/sample_endpoint/assets/44462824/a184e0d4-8f4a-40cf-96f9-d80a8d64fe54">
+## How to Use
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/GuichoEstrada/sample_endpoint.git
+   
+Install Dependencies:
+cd sample_endpoint
+npm install
+
+Set Up MongoDB:
+Create your own MongoDB database and collection.
+Populate the collection with your own data.
+Update MongoDB URI:
+
+Open app.js and replace the MONGO_URI with your MongoDB URI:
+javascript
+Copy code
+const MONGO_URI = 'mongodb+srv://<username>:<password>@cluster0.mnc8coe.mongodb.net/<database>?retryWrites=true&w=majority';
+Run the Application:
+
+bash
+Copy code
+node app.js
+Testing with Postman:
+
+Use Postman to test the endpoints:
+Getting Data Using ID: Send a GET request to http://localhost:3000/files/<id> to retrieve a specific file.
+Getting All Data: Send a GET request to http://localhost:3000/files to retrieve all files.
+Endpoint Status:
+
+The endpoints should be working as expected.
+Screenshots
+Getting Data Using ID:
+<img width="374" alt="image" src="https://github.com/GuichoEstrada/sample_endpoint/assets/44462824/5c284bd7-93ed-4a1d-b23a-17d35defb381">
+
+Getting All Data:
+<img width="439" alt="image" src="https://github.com/GuichoEstrada/sample_endpoint/assets/44462824/c19fc5f7-df4d-4555-b01e-bd975975d370">
+
