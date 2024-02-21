@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import the cors package
 
 const app = express();
 const PORT = 3000;
@@ -9,6 +10,9 @@ const MONGO_URI = 'mongodb+srv://lcrestrada:1Seb2Svs3Kmi@cluster0.mnc8coe.mongod
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB:', err));
+
+// Use the cors middleware
+app.use(cors());
 
 // Define a schema for the 'files' collection
 const filesSchema = new mongoose.Schema({
